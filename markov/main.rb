@@ -21,4 +21,4 @@ Gemäss dem Papier der Finanzverwaltung bekäme der Verkehr 550 Millionen Franke
 Ob das im Sinne der Bevölkerung ist, wird in den Departementen angezweifelt. «Die Bevölkerung würde andere Prioritäten setzen, sie würde mehr Mittel für Familien, für Bildung und Infrastruktur sprechen», argumentieren regierungsnahe Kreise.
 TEXT
 
-puts m.generate
+m.generate 10_000_000

@@ -91,27 +91,4 @@ describe Markov do
     end
   end
   
-  context "#initial_char" do
-    it "returns a String" do
-      @m.initial_char.should be_instance_of(String)
-    end
-    
-    it "is length 1" do
-      @m.initial_char.size.should == 1
-    end
-    
-    it "takes a character from the beginning of a word" do
-      ['h', 'w'].should include(@m.initial_char)
-    end
-    
-    it "takes a character from the beginning of a word" do
-      was_a_w = false
-      1000.times do
-        was_a_w = @m.initial_char == "w"
-        break if was_a_w
-      end
-      was_a_w.should == true
-    end
-  end
-  
 end

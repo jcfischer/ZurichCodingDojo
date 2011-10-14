@@ -1,11 +1,12 @@
+# zurichdojo.ch
+#
+#
 class Markov
   
+  attr_reader :text
+    
   def initialize text
     @text = text.strip
-  end
-  
-  def text
-    @text
   end
   
   def analyze
@@ -25,10 +26,6 @@ class Markov
     @mapping ||= analyze
   end
   
-  def initial_char
-    mapping[' '][rand(mapping[' '].size)]
-  end
-  
   def next_char preceding
     choice = mapping[preceding]
     choice[rand(choice.size)]
@@ -36,12 +33,12 @@ class Markov
   
   def generate length = 1800
     char = " "
-    result = ""
+    result = []
     length.times do
-      char = next_char(char)
-      result << char  
+      char = next_char char
+      result << char
     end
-    result
+    result.join
   end
   
 end
